@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio d'Ahmet Berk Ateş, étudiant en informatique.">
+    <title>Portfolio - Ahmet Berk Ateş</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="projects.js" defer></script>
+    <script src="filters.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Portfolio - Ahmet Berk Ateş</h1>
+
+        <section class="filters-container" id="main-filters" aria-label="Filtres des projets">
+            <div class="filters-row">
+                <label class="filter-group">
+                    <span class="filter-label">Expérience :</span>
+                    <select class="filter-select" data-filter-type>
+                        <option value="all" data-label="Tout">Tout</option>
+                        <option value="Stage" data-label="Stage">Stage</option>
+                        <option value="other" data-label="Autres">Autres</option>
+                    </select>
+                </label>
+
+                <label class="filter-group">
+                    <span class="filter-label">Niveau :</span>
+                    <select class="filter-select" data-filter-year>
+                        <option value="all" data-label="Tous">Tous</option>
+                        <option value="M2" data-label="M2">M2</option>
+                        <option value="M1" data-label="M1">M1</option>
+                        <option value="L3" data-label="L3">L3</option>
+                        <option value="L2" data-label="L2">L2</option>
+                        <option value="L1" data-label="L1">L1</option>
+                    </select>
+                </label>
+
+                <label class="filter-group">
+                    <span class="filter-label">Domaine :</span>
+                    <select class="filter-select" data-filter-category>
+                        <option value="all" data-label="Tous">Tous</option>
+                        <option value="Computer Graphics & VR" data-label="Graphisme & VR">Graphisme & VR</option>
+                        <option value="IA & Data Science" data-label="IA & Data">IA & Data</option>
+                        <option value="Développement & Logiciel" data-label="Développement">Développement</option>
+                        <option value="Réseau & Base de Données" data-label="Réseau & DB">Réseau & DB</option>
+                        <option value="Recherche & Académique" data-label="Recherche">Recherche</option>
+                    </select>
+                </label>
+
+                <button class="reset-btn" id="reset-filters" type="button">Réinitialiser</button>
+            </div>
+
+            <div id="tag-filters" class="filter-group" aria-label="Filtres par technologies"></div>
+        </section>
+
+        <section id="projects-container" class="grid-layout" aria-live="polite"></section>
+    </main>
+</body>
+</html>
